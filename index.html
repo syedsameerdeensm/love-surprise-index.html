@@ -1,1 +1,46 @@
-index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Do You Love Me?</title>
+<style>
+body{
+    text-align:center;
+    font-family:Arial,sans-serif;
+    margin-top:100px;
+}
+button{
+    padding:10px 20px;
+    font-size:18px;
+    margin:10px;
+}
+#no{
+    position:absolute;
+}
+</style>
+</head>
+<body>
+
+<h1>Do you love me? ❤️</h1>
+
+<button onclick="showLove()">Yes ❤️</button>
+<button id="no">No 😜</button>
+
+<script>
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", () => {
+    noBtn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+    noBtn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+});
+
+function showLove() {
+    document.body.innerHTML = `
+        <h1>En Azhagu! ❤️</h1>
+        <h2>Ennaku Therium Sumaiya Loosu Kamnaty! 😊</h2>
+        <p>அல்லாஹ் எனக்கு அளித்த மிக அழகான பரிசு நீ தான். உன் அன்பு என் வாழ்க்கையை ஒளிரச் செய்கிறது. 💕</p>
+    `;
+}
+</script>
+
+</body>
+</html>
